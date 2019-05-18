@@ -1,0 +1,21 @@
+{% extends 'base/base.html' %}
+
+
+
+{% block title %}
+    {{ object.title}}
+{% endblock title %}
+    
+{% block content %}
+<div class="card mt-2" style="background: #f8f8f8; color: #000;">
+        <div class="card-body">
+          <h6 class="card-subtitle mb-2 text-muted">كتبه: {{ object.user}}   </h6>
+          <h5 class="card-title text-center">{{ object.title }}</h5>
+            <p class="card-text">{{ object.subj}}</p>
+          <hr>
+          
+          قبل {{ object.timestamp|timesince }} 
+        </div>
+      </div>
+{% endblock content %}
+    
