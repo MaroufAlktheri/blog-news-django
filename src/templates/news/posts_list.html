@@ -1,0 +1,24 @@
+{% extends 'base/base.html' %}
+
+
+
+{% block content %}
+<div class="container">
+   {% for obj in object_list %}
+    <div class="row">
+        <div class="col">
+                <div class="card mt-2" style="background: #f8f8f8; color: #000;">
+                        <div class="card-body">
+                          <h6 class="card-subtitle mb-2 text-muted">كتبه: {{ obj.user}}   </h6>
+                          <h6 class="card-title"><a href="{{ obj.id }}">{{ obj.title }}</a></h5>
+                          <hr>
+                          قبل {{ obj.timestamp|timesince }} 
+                        </div>
+                      </div>
+        </div>
+    </div>
+   {% endfor %}
+
+
+</div>
+{% endblock content %}
